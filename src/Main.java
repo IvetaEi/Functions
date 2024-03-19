@@ -72,8 +72,14 @@ public class Main {
         System.out.println("6-tos uzduoties skaiciu vidurkis: " + average);
 
         System.out.println("--------- 9 uzduotis ----------");
-        int ilgis = 6;
-        int plotis = 4;
+        int ilgis = (int) Math.round(Math.random() * 6);
+        int plotis = (int) Math.round(Math.random() * 4);
+        rectangle(ilgis, plotis);
+
+        System.out.println("--------- 10 uzduotis ---------");
+        String sentence = "Šiandien labai graži diena";
+        int countSymbols = 0;
+        int countSpaces = 0;
 
 
   }
@@ -129,16 +135,36 @@ public class Main {
         return average;
     }
 
-    public static int rectangle(int x, int y) {
+    public static void rectangle(int x, int y) {
+        for (int x1 = 0; x1 <= 6; x1++) {
+            for (int y2 = 0; y2 <= 4; y2++) {
+                if (y2 == y2*4){
+                    System.out.print(System.lineSeparator());
+                } else {
+                    System.out.print("* ");
+                }
+            }
+        }
+    }
+//for (int x = 0; x < 26; x++) {
+//        for (int y = 0; y < 26; y++) {
+//            if (y == y*25){
+//                System.out.print(System.lineSeparator());
+//
+//            }else{
+//                System.out.print("* ");
+//
+//            }
+//        }
+//
+//    }
 
+
+    public static String sentenceSymbolsCount(String a) {
 
     }
 
 
 
-
-
-
-
-}
+    }
 
