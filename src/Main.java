@@ -6,7 +6,7 @@ public class Main {
 //        sayHiTo(vardas);
 //        printRndIntChoice(14,30);
 //        double result = returnPI();
-//        System.out.println(result);
+//        Systeggut.println(result);
 //        System.out.println( returnPI() );
 //
 //        System.out.println(formatNameCase("iVETA"));
@@ -40,12 +40,10 @@ public class Main {
         int variable2 = 15;
         sum(variable1, variable2);
 
-
         System.out.println("--------- 2 uzduotis ----------");
 //        double result = PISq();//pirmas variantas
 //        System.out.println(result);
         System.out.println(PISq());//arba antras variantas
-
 
         System.out.println("--------- 3 uzduotis ----------");
         int a = 10;
@@ -54,22 +52,28 @@ public class Main {
 //        System.out.println(res);
         System.out.println(multiplication(a, b));//arba antras variantas
 
-
         System.out.println("--------- 4 uzduotis ----------");
         int[] arr = {3, 5, 7, 9};
         printArray(arr);
 
-
         System.out.println("--------- 5 uzduotis ----------");
         System.out.println(randomNr(12,30));
-
 
         System.out.println("--------- 6 uzduotis ----------");
         int[] randomArray = randomArray(5,10,5);
         printArray(randomArray);
 
         System.out.println("--------- 7 uzduotis ----------");
+        int sum = arraySum(randomArray);
+        System.out.println("6-tos uzduoties skaiciu suma: " + sum);
 
+        System.out.println("--------- 8 uzduotis ----------");
+        double average = arrayAverage(randomArray);
+        System.out.println("6-tos uzduoties skaiciu vidurkis: " + average);
+
+        System.out.println("--------- 9 uzduotis ----------");
+        int ilgis = 6;
+        int plotis = 4;
 
 
   }
@@ -107,10 +111,28 @@ public class Main {
         return array;
     }
 
-    public static int sixthArray() {
-
+    public static int arraySum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        return sum;
     }
 
+    public static double arrayAverage(int[] arr) {
+        double sum = 0;
+        double average = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+            average = sum / arr.length;
+        }
+        return average;
+    }
+
+    public static int rectangle(int x, int y) {
+
+
+    }
 
 
 
