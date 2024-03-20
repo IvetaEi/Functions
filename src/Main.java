@@ -94,6 +94,7 @@ public class Main {
         printTextInAWeirdWay(text);
 
         System.out.println("--------- 3 uzduotis ----------");
+        System.out.println(withoutRem(8));
 
 
 
@@ -244,18 +245,18 @@ public class Main {
         System.out.println("[" + number + "]");}
     }
 
-//    public static int withoutRem(int number) {
-//        int countWithoutRem = 0;
-//        if (number == 1 || number == number) {
-//            continue;
-//        } else if (number % ) {
-//            countWithoutRem++;
-//        }else{
-//
-//       }
-//        return number;
-//    }
-
+    public static int withoutRem(int number) {
+        int countWithoutRem = 0;
+        if (number <= 1) {
+            return 0;
+        }
+        for (int dal = 1; dal < number; dal++) {
+            if (number % dal == 0) {
+                countWithoutRem++;
+            }
+        }
+        return countWithoutRem;
+    }
 
 
 
